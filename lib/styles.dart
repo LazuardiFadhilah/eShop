@@ -23,7 +23,7 @@ TextStyle headerTextStyle = GoogleFonts.robotoSlab(
 );
 
 TextStyle titleTextStyle = GoogleFonts.robotoSlab(
-  color: blackColor,
+  color: blackColor.withOpacity(0.8),
   fontSize: 16,
   fontWeight: medium,
 );
