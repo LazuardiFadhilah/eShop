@@ -1,4 +1,5 @@
 import 'package:eshop/screens/onboard.dart';
+import 'package:eshop/screens/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,9 +17,13 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return const MaterialApp(
+        return MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: OnBoard(),
+          initialRoute: '/',
+          routes: {
+            '/': (context) => const OnBoard(),
+            SignUp.routeName: (context) => const SignUp(),
+          },
         );
       },
     );

@@ -1,3 +1,4 @@
+import 'package:eshop/screens/signup.dart';
 import 'package:eshop/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -51,7 +52,10 @@ class OnBoard extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(30),
                   child: GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamedAndRemoveUntil(context,
+                          SignUp.routeName, (Route<dynamic> route) => false);
+                    },
                     child: Container(
                       padding: const EdgeInsets.all(18),
                       alignment: Alignment.center,
