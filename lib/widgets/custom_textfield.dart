@@ -19,7 +19,7 @@ class CustomTextField extends StatelessWidget {
           style: titleTextStyle,
         ),
         const SizedBox(
-          height: 5,
+          height: 10,
         ),
         TextField(
           decoration: InputDecoration(
@@ -36,10 +36,16 @@ class CustomTextField extends StatelessWidget {
               borderSide: BorderSide.none,
             ),
             suffixIcon: isObscured != null
-                ? const Icon(Icons.remove_red_eye)
+                ? IconButton(
+                    icon: const Icon(
+                      Icons.remove_red_eye,
+                    ),
+                    onPressed: () {},
+                  )
                 : const SizedBox(),
           ),
         ),
+        const SizedBox(height: 20),
       ],
     );
   }
